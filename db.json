@@ -1,0 +1,102 @@
+{
+  "TrackExpenses": [
+    {
+      "id": "2",
+      "status": "Pending",
+      "name": "Rent",
+      "amount": 500,
+      "date": "2024-07-03"
+    },
+    {
+      "id": "3",
+      "status": "Completed",
+      "name": "Utilities",
+      "amount": 150,
+      "date": "2024-07-05"
+    },
+    {
+      "id": "e4a7",
+      "status": "Pending",
+      "name": "nnl0812",
+      "amount": "8765",
+      "date": "2024-07-18"
+    },
+    {
+      "id": "e3b0",
+      "name": "Dự án 1",
+      "status": "Pending",
+      "amount": "123",
+      "date": "2024-07-12"
+    }
+  ],
+  "budgetSettings": [
+    {
+      "id": "1",
+      "category": "Food",
+      "budget": 100,
+      "note": "Meals"
+    },
+    {
+      "id": "44bc",
+      "category": "Transportation",
+      "budget": "250",
+      "note": "wwwwww"
+    },
+    {
+      "id": "41de",
+      "budget": "50",
+      "note": "Eat",
+      "category": "Food"
+    },
+    {
+      "id": "b412",
+      "budget": "1000",
+      "note": "2222",
+      "category": "Entertainment"
+    },
+    {
+      "id": "0e75",
+      "budget": "1000",
+      "note": "wwwwww",
+      "category": "Transportation"
+    },
+    {
+      "id": "30df",
+      "budget": "1000",
+      "note": "hehhe",
+      "category": "Shopping"
+    }
+  ],
+  "user": [
+    {
+      "id": "e048",
+      "email": "nnl0812",
+      "password": "123",
+      "confirm": "123"
+    },
+    {
+      "id": "8918",
+      "email": "huhuhu",
+      "password": "hehe",
+      "confirm": "hehe"
+    },
+    {
+      "id": "02ef",
+      "email": "vuilam",
+      "password": "123",
+      "confirm": "123"
+    },
+    {
+      "id": "06a8",
+      "email": "admin@gmai.com",
+      "password": "123",
+      "confirm": "123"
+    },
+    {
+      "id": "7246",
+      "email": "nnl@gmail.com",
+      "password": "nnl123",
+      "confirm": "nnl123"
+    }
+  ]
+}
