@@ -27,6 +27,13 @@
       "status": "Pending",
       "amount": "123",
       "date": "2024-07-12"
+    },
+    {
+      "id": "5fff",
+      "status": "Pending",
+      "name": "Sashimi cá tra",
+      "amount": "0",
+      "date": "2024-08-31"
     }
   ],
   "budgetSettings": [
@@ -65,6 +72,12 @@
       "budget": "1000",
       "note": "hehhe",
       "category": "Shopping"
+    },
+    {
+      "id": "65e0",
+      "budget": "20",
+      "note": "wwwwww",
+      "category": "Food"
     }
   ],
   "user": [
@@ -97,6 +110,182 @@
       "email": "nnl@gmail.com",
       "password": "nnl123",
       "confirm": "nnl123"
+    },
+    {
+      "id": "26c4",
+      "email": "admin@gmai.com",
+      "password": "123123",
+      "confirm": "123123"
+    },
+    {
+      "id": "4d69",
+      "email": "dd",
+      "password": "d",
+      "confirm": "d"
+    },
+    {
+      "id": "77e3",
+      "email": "aa",
+      "password": "aa",
+      "confirm": "aa"
+    },
+    {
+      "id": "326c",
+      "email": "1",
+      "password": "1",
+      "confirm": "1"
+    },
+    {
+      "id": "022e",
+      "email": "admin@gmai.com",
+      "password": "123",
+      "confirm": "123"
+    },
+    {
+      "id": "0364",
+      "email": "nnl@gmail.com",
+      "password": "nnl123",
+      "confirm": "nnl123"
+    },
+    {
+      "id": "6f1a",
+      "email": "nguyennhuly08122004@gmail.com",
+      "password": "qqq",
+      "confirm": "qqqq"
+    },
+    {
+      "id": "c544",
+      "email": "admin@gmai.com",
+      "password": "123123",
+      "confirm": "123123"
+    },
+    {
+      "id": "75f8",
+      "email": "admin@gmai.com",
+      "password": "123",
+      "confirm": "123"
+    },
+    {
+      "id": "148b",
+      "email": "1",
+      "password": "1",
+      "confirm": "1"
+    },
+    {
+      "id": "4bfa",
+      "email": "nhuly0812@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "83f8",
+      "email": "nhuly0812@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "8a73",
+      "email": "nhuly0812@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "0369",
+      "email": "admin@gmai.com",
+      "password": "123"
+    },
+    {
+      "id": "6c5f",
+      "email": "admin@gmai.com",
+      "password": "123"
+    },
+    {
+      "id": "8719",
+      "email": "admin@gmai.com",
+      "password": "123"
+    },
+    {
+      "id": "9feb",
+      "email": "admin@gmai.com",
+      "password": "123"
+    },
+    {
+      "id": "d78d",
+      "email": "hehe@gmail.com",
+      "password": "hehe",
+      "confirm": "hehe"
+    },
+    {
+      "id": "ce5d",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "4739",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "da79",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "31fb",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "d01f",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "ef4b",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "a90c",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "5560",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "488c",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "ec5e",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "e48b",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "be9f",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "1a8c",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "e63e",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
+    },
+    {
+      "id": "04c8",
+      "email": "hehe@gmail.com",
+      "password": "hehe"
     }
   ]
 }

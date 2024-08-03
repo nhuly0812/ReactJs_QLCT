@@ -1,32 +1,72 @@
-
+import React, { useState, useEffect } from 'react';
 import CostOverview from '../../CostOverview/CostOverview';
-import Money from './Money/Money'
+import Money from './Money/Money';
 
-const data = [
-  { price: 100, title: 'Food', bgColor: 'bg-red-500' },
-  { price: 200, title: 'Transportation	', bgColor: ' bg-pink-500' },
-  { price: 300, title: 'Shopping', bgColor: 'bg-green-500' },
-  { price: 400, title: 'Entertainment', bgColor: 'bg-yellow-500' },
-];
 function Transactions() {
+  const [budgetSettings, setBudgetSettings] = useState([]);
+
+  const fetchBudgetSettings = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/budgetSettings');
+      const data = await response.json();
+      setBudgetSettings(data);
+    } catch (error) {
+      console.error('Error fetching budget settings:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchBudgetSettings();
+  }, []);
+
+  // Group budgetSettings by category and calculate total for each category
+  const categorizedBudgets = budgetSettings.reduce((acc, budget) => {
+    const category = budget.category || 'Unknown'; // Use 'Unknown' if category is missing
+    if (!acc[category]) {
+      acc[category] = { total: 0, bgColor: '' }; // Initialize the category
+    }
+    acc[category].total += parseFloat(budget.budget);
+    return acc;
+  }, {});
+
+  // Example colors for categories, you may want to customize or fetch these from somewhere
+  const categoryColors = {
+    Food: 'bg-red-500',
+    Transportation: 'bg-pink-500',
+    Shopping: 'bg-green-500',
+    Entertainment: 'bg-yellow-500',
+    Unknown: 'bg-gray-500'
+  };
+
+  // Convert categorizedBudgets object to an array
+  const data = Object.keys(categorizedBudgets).map(category => ({
+    title: category,
+    total: categorizedBudgets[category].total,
+    bgColor: categoryColors[category] || 'bg-gray-500'
+  }));
 
   return (
-    <div className=' bg-white shadow-lg '>
-    <div className='h-16 flex items-center pl-3 border-b-2 '>
-        <h2 className='font-bold text-[#308BEB]  '>Transactions</h2>
-    </div>
-        <div className='flex p-5'>
+    <div className='bg-white shadow-lg'>
+      <div className='h-16 flex items-center pl-3 border-b-2'>
+        <h2 className='font-bold text-[#308BEB]'>Transactions</h2>
+      </div>
+      <div className='flex p-5'>
         <div className='w-2/4 grid grid-cols-2 gap-4'>
-           {data.map((item,index)=>(
-            <Money key={index} bgColor={item.bgColor} price={item.price} title={item.title}/>
-           ))}
+          {data.map((item, index) => (
+            <Money
+              key={index}
+              bgColor={item.bgColor}
+              total={item.total}
+              title={item.title}
+            />
+          ))}
         </div>
-       <div className='w-2/4 m-2'>
-        <CostOverview/>
-       </div>
+        <div className='w-2/4 m-2'>
+          <CostOverview />
+        </div>
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
-export default Transactions
+export default Transactions;

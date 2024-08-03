@@ -1,17 +1,24 @@
-import Chart from './Chart/Chart'
+import React, { useEffect, useState } from 'react';
+import Chart from './Chart/Chart'; // Đảm bảo đường dẫn chính xác
 
-function CostOverview() {
-  const expenses = [
-    { status: 'Completed', name: 'Groceries', amount: 100, date: '2024-07-01' },
-    { status: 'Pending', name: 'Rent', amount: 500, date: '2024-07-03' },
-    { status: 'Completed', name: 'Utilities', amount: 150, date: '2024-07-05' },
-    { status: 'Pending', name: 'Entertainment', amount: 200, date: '2024-07-06' },
-  ];
+const CostOverview = () => {
+  const [expenses, setExpenses] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/TrackExpenses')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Dữ liệu nhận được:', data); // Xem dữ liệu nhận được
+        setExpenses(data); // Cập nhật state với dữ liệu
+      })
+      .catch(error => console.error('Lỗi khi lấy dữ liệu:', error));
+  }, []);
+
   return (
     <div className=''>
       <Chart expenses={expenses} />
     </div>
-  )
-}
+  );
+};
 
-export default CostOverview
+export default CostOverview;
