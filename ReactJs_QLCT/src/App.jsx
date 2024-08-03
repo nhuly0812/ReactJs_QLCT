@@ -11,13 +11,13 @@ function App() {
                     const Layout = item.layout ? item.layout : DefaultLayout;
                     const Page = item.component;
                     return (
-                    
                             <Route
                                 key={index}
                                 path={item.path}
                                 element={
                                     <Layout title={item.title}>
-                                        <Page />
+                                     {/* Sử dụng biến Page để render component trang khi route khớp. */}
+                                        <Page /> 
                                     </Layout>
                                 }
                             />
