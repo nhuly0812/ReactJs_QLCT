@@ -53,13 +53,11 @@ export const updateJobs = async (job, url) => {
         throw error; // Ném lỗi ra để xử lý ở nơi gọi hàm
     }
 };
-
-
-// export const deleteJobs = async (jobs,setJobs, id, url)=>{
-//     try{
-//         await fetch(url, { method: 'DELETE' });
-//         setJobs(jobs.filter((item) => item.id !== id));
-//         }catch (error) {
-//             console.error('Error deleting budget setting:', error);
-//         }
-// }
+export const deleteJobs = async (jobs, setJobs, id, url) => {
+    try {
+        await fetch(url, { method: 'DELETE' });
+        setJobs(jobs.filter((item) => item.id !== id));
+    } catch (error) {
+        console.error('Error deleting job:', error);
+    }
+};

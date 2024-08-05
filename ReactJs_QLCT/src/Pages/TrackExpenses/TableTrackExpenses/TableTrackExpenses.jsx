@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchJobs } from '../../../services/jobs';
+import { fetchJobs, deleteJobs } from '../../../services/jobs';
 function TableTrackExpenses({ style }) {
-    // const trackExpenses = [
+    // const trackExpenses = [,
     //     { status: 'Completed', name: 'Groceries', amount: 100, date: '2024-07-01' },
     //     { status: 'Pending', name: 'Rent', amount: 500, date: '2024-07-03' },
     //     { status: 'Completed', name: 'Utilities', amount: 150, date: '2024-07-05' },
@@ -37,24 +37,13 @@ function TableTrackExpenses({ style }) {
     }, []);
 
     const handleDelete = async (id) => {
-        try{
-        await fetch(`http://localhost:5000/TrackExpenses/${id}`, { method: 'DELETE' });
-        setJobs(jobs.filter((item) => item.id !== id));
-        }catch (error) {
-            console.error('Error deleting budget setting:', error);
+        try {
+            await deleteJobs(jobs, setJobs, id, `http://localhost:5000/TrackExpenses/${id}`);
+        } catch (error) {
+            console.error('Error deleting track expense:', error);
         }
-    
     };
 
-    // const addTrackExpenses = async (job) =>{
-    //     const res = await fetch('http://localhost:5000/TrackExpenses',{
-    //         method: 'POST',
-    //         headers:{'Content-type': 'application/json'},
-    //         body: JSON.stringify()
-    //     })
-    //     const data= res.json()
-    //     setJobs([...jobs, data])
-    // }
     return (
         <>
             <div className={`bg-white ${style} shadow-md`}>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { fetchJobs } from "../../../services/jobs";
+import { fetchJobs,deleteJobs } from "../../../services/jobs";
 
 function TableBudgetSettings({ styte }) {
     const [jobs, setJobs] = useState([]);
@@ -29,12 +29,12 @@ function TableBudgetSettings({ styte }) {
 
     const handleDelete = async (id) => {
         try {
-            await fetch(`http://localhost:5000/budgetSettings/${id}`, { method: 'DELETE' });
-            setJobs(jobs.filter((item) => item.id !== id));
+            await deleteJobs(jobs, setJobs, id, `http://localhost:5000/budgetSettings/${id}`);
         } catch (error) {
-            console.error('Error deleting budget setting:', error);
+            console.error('Error deleting track expense:', error);
         }
     };
+
 
     return (
         <div className={`bg-white gap-5 mt-5 ${styte} shadow-md`}>

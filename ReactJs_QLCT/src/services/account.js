@@ -26,13 +26,13 @@ export const login = async (email, password, navigate) => {
         }
 
         const data = await res.json();
+        
 
-        if (data.token) {
-            toast.success('Login successful');
-            navigate('/'); // Chuyển hướng người dùng đến trang home sau khi đăng nhập thành công
-        } else {
-            toast.error('Invalid credentials');
+        if (!data) {
+            return toast.error('Invalid credentials');
         }
+        toast.success('Login successful');
+        navigate('/'); 
     } catch (err) {
         console.error('Fetch error:', err);
         toast.error('Login failed due to: ' + err.message);
@@ -41,6 +41,7 @@ export const login = async (email, password, navigate) => {
 
 export const createUser = async (user, url) => {
     try {
+      
         const res = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -56,3 +57,5 @@ export const createUser = async (user, url) => {
         throw error;
     }
 };
+
+

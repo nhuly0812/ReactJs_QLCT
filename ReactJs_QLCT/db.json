@@ -20,20 +20,6 @@
       "name": "nnl0812",
       "amount": "8765",
       "date": "2024-07-18"
-    },
-    {
-      "id": "e3b0",
-      "name": "Dự án 1",
-      "status": "Pending",
-      "amount": "123",
-      "date": "2024-07-12"
-    },
-    {
-      "id": "5fff",
-      "status": "Pending",
-      "name": "Sashimi cá tra",
-      "amount": "0",
-      "date": "2024-08-31"
     }
   ],
   "budgetSettings": [
@@ -88,12 +74,6 @@
       "confirm": "123"
     },
     {
-      "id": "8918",
-      "email": "huhuhu",
-      "password": "hehe",
-      "confirm": "hehe"
-    },
-    {
       "id": "02ef",
       "email": "vuilam",
       "password": "123",
@@ -116,18 +96,6 @@
       "email": "admin@gmai.com",
       "password": "123123",
       "confirm": "123123"
-    },
-    {
-      "id": "4d69",
-      "email": "dd",
-      "password": "d",
-      "confirm": "d"
-    },
-    {
-      "id": "77e3",
-      "email": "aa",
-      "password": "aa",
-      "confirm": "aa"
     },
     {
       "id": "326c",
@@ -286,6 +254,65 @@
       "id": "04c8",
       "email": "hehe@gmail.com",
       "password": "hehe"
+    },
+    {
+      "id": "f175",
+      "email": "admin@gmai.com",
+      "password": "123",
+      "confirm": "123"
+    },
+    {
+      "id": "99a7",
+      "email": "admin@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "2e81",
+      "email": "admin@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "5830",
+      "email": "admin@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "62e7",
+      "email": "admin@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "6c61",
+      "email": "admin@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "5f42",
+      "email": "admin@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "8d01",
+      "email": "1@",
+      "password": "1",
+      "confirm": "1"
+    },
+    {
+      "id": "32b8",
+      "email": "z",
+      "password": "z",
+      "confirm": "z"
+    },
+    {
+      "id": "78bb",
+      "email": "admin@gmai.com",
+      "password": "123123",
+      "confirm": "123123"
+    },
+    {
+      "id": "e424",
+      "email": "admin@gmail.com",
+      "password": "123123123"
     }
   ]
 }
