@@ -15,7 +15,6 @@ import { AdminLayout, LoginLayout } from '../components/Layouts';
 import AdminPage from '../Pages/AdminPage/AdminPage';
 import AdminUser from '../Pages/AdminUser/AdminUser';
 import AdminExpense from '../Pages/AdminExpense/AdminExpense';
-import FinancialReport from '../Pages/FinancialReport/FinancialReport';
 
 const publicRouter = [
     { path: '/', component: Home },
@@ -26,7 +25,6 @@ const publicRouter = [
     { path: '/setting', component: Setting },
     { path: '/account', component: Account },
     
-    { path: '/FinancialReport', component: FinancialReport },
 
     { path: '/admin', title: 'Home ', component: AdminPage, layout: AdminLayout },
     { path: '/adminUser', title: 'User Management', component: AdminUser, layout: AdminLayout },

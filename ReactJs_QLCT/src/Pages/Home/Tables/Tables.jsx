@@ -4,7 +4,7 @@ import TableTrackExpenses from "../../TrackExpenses/TableTrackExpenses/TableTrac
 function Tables() {
     return (
         <div className="flex justify-center gap-5 w-full]">
-            <TableTrackExpenses style='w-[50%] gap-5 mt-5'/>
+            <TableTrackExpenses style='w-[50%] gap-5 mt-5 '/>
             <TableBudgetSettings styte='w-[50%] h-[50%]  '/>
         </div>
     );

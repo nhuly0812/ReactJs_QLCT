@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { fetchJobs,deleteJobs } from "../../../services/jobs";
 
 function TableBudgetSettings({ styte }) {
+    //tạo 1 state để lưu ngân sách 
     const [jobs, setJobs] = useState([]);
 
+    //lấy dữ liệu từ API 
     const fetchBudgetSettings = async () => {
         try {
             const data = await fetchJobs(`http://localhost:5000/budgetSettings`);
@@ -13,22 +15,26 @@ function TableBudgetSettings({ styte }) {
             console.error('Error fetching budget setting:', error);
         }
     };
-
+//dùng useEffect để render dữ liệu từ API
     useEffect(() => {
         const getBudgetSettings = async () => {
             try {
+                //lấy dữ liệu từ API thông qua hàm fetchBudgetSettings
                 const tableServer = await fetchBudgetSettings();
+                //cập nhập jobs
                 setJobs(tableServer);
             } catch (error) {
                 console.error('Error fetching budget settings:', error);
             }
         };
 
-        getBudgetSettings();
+        getBudgetSettings(); //được gọi ngay trong hàm để đảm bảo rằng việc lấy dữ liệu từ API và cập nhật state xảy ra ngay khi component được mount (tải) lần đầu tiên. 
     }, []);
 
-    const handleDelete = async (id) => {
-        try {
+// Xóa ngân sách
+const handleDelete = async (id) => {
+        try { 
+            //gọi hàm deleteJobs để xóa dữ liệu thông qua id và cập nhập dữ liệu jobs sau khi dữ liệu bị xóa 
             await deleteJobs(jobs, setJobs, id, `http://localhost:5000/budgetSettings/${id}`);
         } catch (error) {
             console.error('Error deleting track expense:', error);
@@ -63,7 +69,9 @@ function TableBudgetSettings({ styte }) {
                                             <i className="fa-solid fa-pen-to-square text-blue-500 mx-1"></i>
                                         </button>
                                     </Link>
-                                    <button onClick={() => handleDelete(item.id)}>
+                                    <button onClick={() => 
+                                    //truyền id muốn xóa vào handleDelete
+                                    handleDelete(item.id)}>
                                         <i className="fa-solid fa-trash text-red-500 mx-1"></i>
                                     </button>
                                 </td>

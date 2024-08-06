@@ -26,7 +26,7 @@ function ItemAccount() {
                 <div key={index} className="w-[300px] my-3">
                     <span className="font-bold">{item.title}:</span>
                     <p>{item.content}</p> 
-                    <i className="fa-regular fa-pen-to-square"></i>
+                    {/* <i className="fa-regular fa-pen-to-square"></i> */}
                 </div>  
             ))}
             

@@ -2,19 +2,9 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchJobs, deleteJobs } from '../../../services/jobs';
 function TableTrackExpenses({ style }) {
-    // const trackExpenses = [,
-    //     { status: 'Completed', name: 'Groceries', amount: 100, date: '2024-07-01' },
-    //     { status: 'Pending', name: 'Rent', amount: 500, date: '2024-07-03' },
-    //     { status: 'Completed', name: 'Utilities', amount: 150, date: '2024-07-05' },
-    //     { status: 'Pending', name: 'Entertainment', amount: 200, date: '2024-07-06' },
-    // ];1
-
+ //tạo 1 state lưu trữ dữ liệu chi phí 
     const [jobs, setJobs] = useState([]);
-    // const fetchTrackExpenses = async () => {
-    //     const res = await fetch('http://localhost:5000/TrackExpenses');
-    //     const data = await res.json();
-    //     return data;
-    // };
+    //lấy dữ liệu từ api 
     const fetchTrackExpenses = async () => {
         try {
             const data = await fetchJobs(`http://localhost:5000/TrackExpenses`);
@@ -23,9 +13,12 @@ function TableTrackExpenses({ style }) {
             console.error('Error fetching budget setting:', error);
         }
     };
+  
+    //dùng useEffect để render dữ liệu từ api
     useEffect(() => {
         const getTrackExpenses = async () => {
             try {
+                //lấy dữ liệu từ api và cập nhập jobs
                 const tableServer = await fetchTrackExpenses();
                 setJobs(tableServer);
             } catch (error) {
@@ -36,8 +29,10 @@ function TableTrackExpenses({ style }) {
         getTrackExpenses();
     }, []);
 
+     // Xóa một mục chi phí dựa trên id
     const handleDelete = async (id) => {
         try {
+            //gọi hàm deleteJobs để xóa mục chi phí dựa trên id 
             await deleteJobs(jobs, setJobs, id, `http://localhost:5000/TrackExpenses/${id}`);
         } catch (error) {
             console.error('Error deleting track expense:', error);

@@ -45,6 +45,8 @@ function TableUser() {
         <div className={` mt-5`}>
             <div className="flex justify-center pb-4">
                 <table className="w-5/6 bg-white text-center shadow-md ">
+                <tbody>
+
                     <tr className='h-14 border-b-2 text-[#308BEB]'>
                         <th>ID</th>
                         <th>Name</th>
@@ -69,6 +71,8 @@ function TableUser() {
                             </td>
                         </tr>
                     ))}
+                    </tbody>
+
                 </table>
             </div>
         </div>

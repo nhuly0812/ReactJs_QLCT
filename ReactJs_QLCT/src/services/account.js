@@ -41,21 +41,57 @@ export const login = async (email, password, navigate) => {
 
 export const createUser = async (user, url) => {
     try {
-      
+        const { email, password, confirm } = user;
+
+        // Kiểm tra định dạng email
+        if (!email) {
+            toast.error('Please enter an email');
+            return;
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            toast.error('Invalid email format');
+            return;
+        }
+
+        // Kiểm tra mật khẩu
+        if (!password) {
+            toast.error('Please enter an password');
+            return;
+        }
+
+        if (password.length < 6) {
+            toast.error('Password must be at least 6 characters long');
+            return;
+        }
+
+        // Kiểm tra xác nhận mật khẩu
+        if (!confirm) {
+            toast.error('Please confirm the password');
+            return;
+        } else if (confirm !== password) {
+            toast.error('Password mismatch');
+            return;
+        }
+
+        // Gọi API để tạo người dùng
         const res = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(user),
+            body: JSON.stringify({ email, password }),
         });
+
         if (!res.ok) {
             throw new Error(`Failed to create user: ${res.statusText}`);
         }
+
         const data = await res.json();
+        toast.success('Đăng ký thành công');
         return data;
     } catch (error) {
         console.error('Error creating user:', error);
+        toast.error('Đăng ký thất bại do: ' + error.message);
         throw error;
     }
 };
+
 
 

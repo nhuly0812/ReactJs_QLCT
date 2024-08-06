@@ -38,6 +38,8 @@ function TableExpense() {
         <div className={` mt-5 `}>
             <div className="flex justify-center pb-4">
                 <table className="w-5/6 bg-white text-center shadow-md ">
+                <tbody>
+
                     <tr className="h-14 border-b-2 text-[#308BEB]">
                         <th>ID</th>
                         <th>status</th>
@@ -65,6 +67,8 @@ function TableExpense() {
                             </td>
                         </tr>
                     ))}
+                    </tbody>
+
                 </table>
             </div>
         </div>

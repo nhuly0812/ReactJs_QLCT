@@ -20,6 +20,20 @@
       "name": "nnl0812",
       "amount": "8765",
       "date": "2024-07-18"
+    },
+    {
+      "id": "710b",
+      "status": "Completed",
+      "name": "Sashimi cá tra",
+      "amount": "50000",
+      "date": "2024-08-08"
+    },
+    {
+      "id": "2e15",
+      "status": "Completed",
+      "name": "hhh",
+      "amount": "123333",
+      "date": "2024-08-09"
     }
   ],
   "budgetSettings": [
@@ -36,12 +50,6 @@
       "note": "wwwwww"
     },
     {
-      "id": "41de",
-      "budget": "50",
-      "note": "Eat",
-      "category": "Food"
-    },
-    {
       "id": "b412",
       "budget": "1000",
       "note": "2222",
@@ -56,59 +64,17 @@
     {
       "id": "30df",
       "budget": "1000",
-      "note": "hehhe",
+      "note": "asdff",
       "category": "Shopping"
     },
     {
-      "id": "65e0",
-      "budget": "20",
-      "note": "wwwwww",
-      "category": "Food"
+      "id": "1005",
+      "budget": "200000",
+      "note": "2222",
+      "category": "Transportation"
     }
   ],
   "user": [
-    {
-      "id": "e048",
-      "email": "nnl0812",
-      "password": "123",
-      "confirm": "123"
-    },
-    {
-      "id": "02ef",
-      "email": "vuilam",
-      "password": "123",
-      "confirm": "123"
-    },
-    {
-      "id": "06a8",
-      "email": "admin@gmai.com",
-      "password": "123",
-      "confirm": "123"
-    },
-    {
-      "id": "7246",
-      "email": "nnl@gmail.com",
-      "password": "nnl123",
-      "confirm": "nnl123"
-    },
-    {
-      "id": "26c4",
-      "email": "admin@gmai.com",
-      "password": "123123",
-      "confirm": "123123"
-    },
-    {
-      "id": "326c",
-      "email": "1",
-      "password": "1",
-      "confirm": "1"
-    },
-    {
-      "id": "022e",
-      "email": "admin@gmai.com",
-      "password": "123",
-      "confirm": "123"
-    },
     {
       "id": "0364",
       "email": "nnl@gmail.com",
@@ -116,192 +82,9 @@
       "confirm": "nnl123"
     },
     {
-      "id": "6f1a",
-      "email": "nguyennhuly08122004@gmail.com",
-      "password": "qqq",
-      "confirm": "qqqq"
-    },
-    {
-      "id": "c544",
-      "email": "admin@gmai.com",
-      "password": "123123",
-      "confirm": "123123"
-    },
-    {
-      "id": "75f8",
-      "email": "admin@gmai.com",
-      "password": "123",
-      "confirm": "123"
-    },
-    {
-      "id": "148b",
-      "email": "1",
-      "password": "1",
-      "confirm": "1"
-    },
-    {
-      "id": "4bfa",
-      "email": "nhuly0812@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "83f8",
-      "email": "nhuly0812@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "8a73",
-      "email": "nhuly0812@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "0369",
-      "email": "admin@gmai.com",
-      "password": "123"
-    },
-    {
-      "id": "6c5f",
-      "email": "admin@gmai.com",
-      "password": "123"
-    },
-    {
-      "id": "8719",
-      "email": "admin@gmai.com",
-      "password": "123"
-    },
-    {
-      "id": "9feb",
-      "email": "admin@gmai.com",
-      "password": "123"
-    },
-    {
-      "id": "d78d",
-      "email": "hehe@gmail.com",
-      "password": "hehe",
-      "confirm": "hehe"
-    },
-    {
-      "id": "ce5d",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "4739",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "da79",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "31fb",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "d01f",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "ef4b",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "a90c",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "5560",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "488c",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "ec5e",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "e48b",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
       "id": "be9f",
       "email": "hehe@gmail.com",
       "password": "hehe"
-    },
-    {
-      "id": "1a8c",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "e63e",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "04c8",
-      "email": "hehe@gmail.com",
-      "password": "hehe"
-    },
-    {
-      "id": "f175",
-      "email": "admin@gmai.com",
-      "password": "123",
-      "confirm": "123"
-    },
-    {
-      "id": "99a7",
-      "email": "admin@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "2e81",
-      "email": "admin@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "5830",
-      "email": "admin@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "62e7",
-      "email": "admin@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "6c61",
-      "email": "admin@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "5f42",
-      "email": "admin@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "8d01",
-      "email": "1@",
-      "password": "1",
-      "confirm": "1"
-    },
-    {
-      "id": "32b8",
-      "email": "z",
-      "password": "z",
-      "confirm": "z"
     },
     {
       "id": "78bb",
@@ -310,9 +93,29 @@
       "confirm": "123123"
     },
     {
-      "id": "e424",
+      "id": "a2d9",
+      "email": "d@gmai.com",
+      "password": "hhhhhh"
+    },
+    {
+      "id": "d31d",
+      "email": "d@gmail.com",
+      "password": "hhhhhh"
+    },
+    {
+      "id": "dd00",
+      "email": "ly@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "7fb4",
+      "email": "admin@gmai.com",
+      "password": "123123"
+    },
+    {
+      "id": "0188",
       "email": "admin@gmail.com",
-      "password": "123123123"
+      "password": "123123"
     }
   ]
 }

@@ -9,14 +9,20 @@ function Register() {
 
     const addUser = async () => {
         try {
-            console.log('Trying to create user:', user);
+            console.log('Đang cố gắng tạo người dùng:', user);
             const data = await createUser(user, 'http://localhost:5000/user');
-            console.log('User created:', data);
-            navigate('/login');
+    
+            if (data) { // Kiểm tra nếu dữ liệu trả về hợp lệ
+                console.log('Users have been created:', data);
+                navigate('/login');
+            } else {
+                console.error("Create failed users, don't switch pages");
+            }
         } catch (error) {
-            console.error('Error creating user:', error);
+            console.error('Lỗi khi tạo người dùng:', error);
         }
     };
+    
 
     return (
         <div className="w-full h-screen flex justify-center items-center">

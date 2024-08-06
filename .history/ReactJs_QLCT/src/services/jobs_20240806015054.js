@@ -1,0 +1,81 @@
+//để lấy dữ liệu từ API thông qua URL được cung cấp.
+export const fetchJobs = async (url) => {
+  //để lấy dữ liệu từ API thông qua URL được cung cấp.
+  const res = await fetch(url);
+  //chuyển đổi phản hồi từ API từ json thành đối tượng js
+  const data = await res.json();
+  //Trả về dữ liệu đã được chuyển đổi.
+  return data;
+};
+
+//để lấy dữ liệu từ API thông qua URL được cung cấp.
+export const getJobs = async (url) => {
+  try {
+    //để lấy dữ liệu từ API thông qua URL được cung cấp.
+    const res = await fetch(url);
+    if (!res.ok) {
+      throw new Error(`Failed to fetch jobs: ${res.statusText}`);
+    }
+    //chuyển đổi phản hồi từ API từ json thành đối tượng js
+
+    const data = await res.json();
+    //Trả về dữ liệu đã được chuyển đổi.
+
+    return data;
+  } catch (error) {
+    console.error("Error fetching jobs:", error);
+    throw error; // Ném lỗi ra để xử lý ở nơi gọi hàm
+  }
+};
+//để gửi dữ liệu từ API thông qua URL được cung cấp.
+export const createJob = async (job, url) => {
+  try {
+    // Gửi yêu cầu POST đến URL
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(job),
+    });
+    // Kiểm tra nếu phản hồi không thành công
+
+    if (!res.ok) {
+      throw new Error(`Failed to create job: ${res.statusText}`);
+    }
+    // Chuyển đổi phản hồi từ JSON thành đối tượng JavaScript
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error creating job:", error);
+    throw error; // Ném lỗi ra để xử lý ở nơi gọi hàm
+  }
+};
+
+//cập nhật dữ liệu trên server (API) thông qua một yêu cầu HTTP PUT.
+export const updateJobs = async (job, url) => {
+  try {
+    // Gửi yêu cầu PUT đến URL
+    const res = await fetch(url, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(job),
+    });
+
+    if (!res.ok) {
+      throw new Error(`Failed to update jobs: ${res.statusText}`);
+    }
+  } catch (error) {
+    console.error("Error updating jobs:", error);
+    throw error; // Ném lỗi ra để xử lý ở nơi gọi hàm
+  }
+};
+
+export const deleteJobs = async (jobs, setJobs, id, url) => {
+  try {
+    //thực hiện yêu cầu xóa dữ liệu API với phương thức DELETE
+    await fetch(url, { method: "DELETE" });
+    //cập nhập state bằng cách lọc bỏ mục đã xóa
+    setJobs(jobs.filter((item) => item.id !== id));
+  } catch (error) {
+    console.error("Error deleting job:", error);
+  }
+};
