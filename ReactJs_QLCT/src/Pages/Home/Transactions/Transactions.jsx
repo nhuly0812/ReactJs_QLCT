@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CostOverview from '../../CostOverview/CostOverview';
 import Money from './Money/Money';
-import { getJobs } from '../../../services/jobs.js'; // Đảm bảo bạn nhập đúng đường dẫn tới hàm getJobs
+import { getJobs } from '../../../services/jobs.js'; 
 
 
 function Transactions() {
@@ -9,9 +9,7 @@ function Transactions() {
 
   const fetchBudgetSettings = async () => {
     try {
-      // Sử dụng getJobs để lấy dữ liệu từ API
       const data = await getJobs('http://localhost:5000/budgetSettings');
-      // Cập nhật state với dữ liệu nhận được
       setBudgetSettings(data);
     } catch (error) {
       console.error('Error fetching budget settings:', error);
@@ -22,17 +20,15 @@ function Transactions() {
     fetchBudgetSettings();
   }, []);
 
-  // Group budgetSettings by category and calculate total for each category
   const categorizedBudgets = budgetSettings.reduce((acc, budget) => {
-    const category = budget.category || 'Unknown'; // Use 'Unknown' if category is missing
+    const category = budget.category || 'Unknown'; 
     if (!acc[category]) {
-      acc[category] = { total: 0, bgColor: '' }; // Initialize the category
+      acc[category] = { total: 0, bgColor: '' }; 
     }
     acc[category].total += parseFloat(budget.budget);
     return acc;
   }, {});
 
-  // Example colors for categories, you may want to customize or fetch these from somewhere
   const categoryColors = {
     Food: 'bg-red-500',
     Transportation: 'bg-pink-500',
@@ -41,7 +37,6 @@ function Transactions() {
     Unknown: 'bg-gray-500'
   };
 
-  // Convert categorizedBudgets object to an array
   const data = Object.keys(categorizedBudgets).map(category => ({
     title: category,
     total: categorizedBudgets[category].total,

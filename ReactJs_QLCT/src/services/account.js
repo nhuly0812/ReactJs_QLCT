@@ -15,9 +15,8 @@ export const login = async (email, password, navigate) => {
             return;
         }
 
-        // Gọi API để lấy danh sách người dùng
         const res = await fetch(`http://localhost:5000/user`, {
-            method: 'GET', // Thay đổi phương thức từ POST sang GET để lấy danh sách người dùng
+            method: 'GET',
             headers: { 'Content-Type': 'application/json' },
         });
 
@@ -55,7 +54,6 @@ export const createUser = async (user, url) => {
     try {
         const { email, password, confirm } = user;
 
-        // Kiểm tra định dạng email
         if (!email) {
             toast.error('Please enter an email');
             return;
@@ -64,7 +62,6 @@ export const createUser = async (user, url) => {
             return;
         }
 
-        // Kiểm tra mật khẩu
         if (!password) {
             toast.error('Please enter an password');
             return;
@@ -75,7 +72,6 @@ export const createUser = async (user, url) => {
             return;
         }
 
-        // Kiểm tra xác nhận mật khẩu
         if (!confirm) {
             toast.error('Please confirm the password');
             return;

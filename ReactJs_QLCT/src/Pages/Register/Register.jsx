@@ -12,7 +12,7 @@ function Register() {
             console.log('Đang cố gắng tạo người dùng:', user);
             const data = await createUser(user, 'http://localhost:5000/user');
     
-            if (data) { // Kiểm tra nếu dữ liệu trả về hợp lệ
+            if (data) { 
                 console.log('Users have been created:', data);
                 navigate('/login');
             } else {

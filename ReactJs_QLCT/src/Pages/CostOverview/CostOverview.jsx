@@ -8,16 +8,15 @@ const CostOverview = () => {
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
-        // Sử dụng getJobs để lấy dữ liệu từ API
         const data = await getJobs('http://localhost:5000/TrackExpenses');
-        console.log('Dữ liệu nhận được:', data); // Xem dữ liệu nhận được
-        setExpenses(data); // Cập nhật state với dữ liệu
+        console.log('Dữ liệu nhận được:', data); 
+        setExpenses(data); 
       } catch (error) {
         console.error('Lỗi khi lấy dữ liệu:', error);
       }
     };
   
-    fetchExpenses(); // Gọi hàm để lấy dữ liệu
+    fetchExpenses(); 
   }, []);
   
 

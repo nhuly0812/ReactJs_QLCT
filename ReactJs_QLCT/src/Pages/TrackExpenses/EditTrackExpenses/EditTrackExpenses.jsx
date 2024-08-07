@@ -30,21 +30,7 @@ function EditTrackExpenses() {
             console.error('Error updating budget setting:', error);
         }
 
-        // try {
-        //     const res = await fetch(`http://localhost:5000/TrackExpenses/${id}`, {
-        //         method: 'PUT',
-        //         headers: { 'Content-Type': 'application/json' },
-        //         body: JSON.stringify(job),
-        //     });
-
-        //     if (res.ok) {
-        //         navigate('/tableTrackExpenses');
-        //     } else {
-        //         console.error('Failed to update budget setting:', res.statusText);
-        //     }
-        // } catch (error) {
-        //     console.error('Error updating budget setting:', error);
-        // }
+      
     };
 
     return (

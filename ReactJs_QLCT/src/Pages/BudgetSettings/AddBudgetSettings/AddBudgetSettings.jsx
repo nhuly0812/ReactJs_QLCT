@@ -8,11 +8,9 @@ function AddBudgetSettings({ jobs, setJobs }) {
   const navigate = useNavigate();
 
   const addBudget = async () => {
-    // Gửi dữ liệu job mới đến server để thêm vào danh sách ngân sách
     const data = await createJob(job, "http://localhost:5000/budgetSettings");
-  // Cập nhật danh sách ngân sách với job mới được thêm
     setJobs([...jobs, data]);
-    navigate("/tableBudgetSettings"); // Điều hướng đến trang /tableBudgetSettings sau khi thêm
+    navigate("/tableBudgetSettings"); 
   };
 
   return (

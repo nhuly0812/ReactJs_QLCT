@@ -10,7 +10,7 @@ function AddTrackExpenses({ jobs, setJobs }) {
   const addExpenses = async () => {
     const data = await createJob(job, "http://localhost:5000/TrackExpenses")
     setJobs([...jobs, data]);
-    navigate('/tableTrackExpenses'); // Điều hướng đến trang /tableTrackExpenses sau khi thêm
+    navigate('/tableTrackExpenses'); 
   };
 
   return (

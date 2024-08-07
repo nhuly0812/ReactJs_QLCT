@@ -26,7 +26,7 @@ function App() {
                     );
                 })}
             </Routes>
-            <ToastContainer /> {/* Đặt ToastContainer ở đây */}
+            <ToastContainer /> 
         </div>
     );
 }

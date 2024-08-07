@@ -4,20 +4,14 @@ import InputEditBudgetSettings from './InputEditBudgetSettings/InputEditBudgetSe
 import { getJobs, updateJobs } from '../../../services/jobs';
 
 function EditBudgetSettings() {
-    //tạo state lưu trữ và cập nhật ngân sách được lấy từ server
     const [job, setJob] = useState({});
-    //điều hướng người dùng
     const navigate = useNavigate();
-    //dùng useParams để lấy tham số id từ url
     const { id } = useParams();
 
-    //lấy dữ liệu từ api khi component render hoặc khi id thay dổi
     useEffect(() => {
         const fetchBudgetSetting = async () => {
             try {
-                 //lấy dữ liệu về ngân sách dựa trên id.
                 const data = await getJobs(`http://localhost:5000/budgetSettings/${id}`);
-                    //Cập nhật state job với dữ liệu lấy được từ API.
                 setJob(data);
             } catch (error) {
                 console.error('Error fetching budget setting:', error);
@@ -29,9 +23,7 @@ function EditBudgetSettings() {
 
     const updateBudget = async () => {
         try {
-            //cập nhật dữ liệu ngân sách dựa trên id lên server.
          await updateJobs(job,`http://localhost:5000/budgetSettings/${id}`);
-//thành công thì điều hướng tới 
             navigate('/tableBudgetSettings');
         } catch (error) {
             console.error('Error updating budget setting:', error);

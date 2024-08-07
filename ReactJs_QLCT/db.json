@@ -66,12 +66,6 @@
       "budget": "1000",
       "note": "asdff",
       "category": "Shopping"
-    },
-    {
-      "id": "1005",
-      "budget": "200000",
-      "note": "2222",
-      "category": "Transportation"
     }
   ],
   "user": [
@@ -115,6 +109,11 @@
     {
       "id": "0188",
       "email": "admin@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "34fc",
+      "email": "a@gmail.com",
       "password": "123123"
     }
   ]
