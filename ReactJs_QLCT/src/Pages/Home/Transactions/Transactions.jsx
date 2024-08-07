@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import CostOverview from '../../CostOverview/CostOverview';
 import Money from './Money/Money';
+import { getJobs } from '../../../services/jobs.js'; // Đảm bảo bạn nhập đúng đường dẫn tới hàm getJobs
+
 
 function Transactions() {
   const [budgetSettings, setBudgetSettings] = useState([]);
 
   const fetchBudgetSettings = async () => {
     try {
-      const response = await fetch('http://localhost:5000/budgetSettings');
-      const data = await response.json();
+      // Sử dụng getJobs để lấy dữ liệu từ API
+      const data = await getJobs('http://localhost:5000/budgetSettings');
+      // Cập nhật state với dữ liệu nhận được
       setBudgetSettings(data);
     } catch (error) {
       console.error('Error fetching budget settings:', error);

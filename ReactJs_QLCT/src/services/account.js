@@ -15,22 +15,33 @@ export const login = async (email, password, navigate) => {
             return;
         }
 
+        // Gọi API để lấy danh sách người dùng
         const res = await fetch(`http://localhost:5000/user`, {
-            method: 'POST',
+            method: 'GET', // Thay đổi phương thức từ POST sang GET để lấy danh sách người dùng
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password }),
         });
 
         if (!res.ok) {
-            throw new Error(`Failed to login: ${res.statusText}`);
+            throw new Error(`Failed to fetch users: ${res.statusText}`);
         }
 
-        const data = await res.json();
-        
+        const users = await res.json();
 
-        if (!data) {
-            return toast.error('Invalid credentials');
+        // Tìm người dùng với email khớp
+        const user = users.find(user => user.email === email);
+
+        if (!user) {
+            toast.error('Email is not registered');
+            return;
         }
+
+        // Kiểm tra mật khẩu
+        if (user.password !== password) {
+            toast.error('Incorrect password');
+            return;
+        }
+
+        // Nếu email và mật khẩu đúng
         toast.success('Login successful');
         navigate('/'); 
     } catch (err) {
@@ -38,6 +49,7 @@ export const login = async (email, password, navigate) => {
         toast.error('Login failed due to: ' + err.message);
     }
 };
+
 
 export const createUser = async (user, url) => {
     try {
