@@ -41,6 +41,13 @@
       "name": "face",
       "amount": "500",
       "date": "2024-08-15"
+    },
+    {
+      "id": "ecf0",
+      "status": "Completed",
+      "name": "Shopping",
+      "amount": "123333",
+      "date": "2024-08-21"
     }
   ],
   "budgetSettings": [

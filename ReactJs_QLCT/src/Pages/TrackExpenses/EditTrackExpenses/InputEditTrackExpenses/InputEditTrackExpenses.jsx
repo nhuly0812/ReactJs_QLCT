@@ -11,8 +11,9 @@ function InputTrackExpenses({ job, setJob }) {
           },
         {
             label: 'Name',
-            type: 'text',
-            placeholder: 'Name',
+            type: 'select',
+            options: ['Food', 'Transportation', 'Shopping', 'Entertainment'],
+            placeholder: '',
             name: 'name',
         },
         {
