@@ -40,7 +40,7 @@ function EditTrackExpenses() {
                 <InputEditTrackExpenses job={job} setJob={setJob} />
                 <button
                     className="border-2 px-3 py-2 w-[350px] mt-5 rounded-lg bg-[#308BEB] text-white flex justify-center shadow-md hover:bg-[#2677c7]"
-                    onClick={updateTrackExpenses}
+                    onClick={updateTrackExpenses}  
                 >
                     UPDATE
                 </button>
