@@ -15,9 +15,9 @@ function InputTrackExpenses({ setJob }) {
       name: 'name'
     },
     {
-      label: 'Amount',
+      label: 'Budget',
       type: 'number',
-      placeholder: 'Amount',
+      placeholder: 'Budget',
       name: 'amount'
     },
     {

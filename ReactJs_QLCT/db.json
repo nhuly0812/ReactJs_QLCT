@@ -34,6 +34,13 @@
       "name": "hhh",
       "amount": "123333",
       "date": "2024-08-09"
+    },
+    {
+      "id": "fc38",
+      "status": "Pending",
+      "name": "face",
+      "amount": "500",
+      "date": "2024-08-15"
     }
   ],
   "budgetSettings": [
@@ -62,10 +69,10 @@
       "category": "Transportation"
     },
     {
-      "id": "30df",
+      "id": "51b5",
+      "category": "Shopping",
       "budget": "1000",
-      "note": "asdff",
-      "category": "Shopping"
+      "note": "Eat"
     }
   ],
   "user": [
@@ -114,6 +121,16 @@
     {
       "id": "34fc",
       "email": "a@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "9909",
+      "email": "a@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "1f7f",
+      "email": "nguyennhuly08122004@gmail.com",
       "password": "123123"
     }
   ]

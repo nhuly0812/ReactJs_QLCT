@@ -47,7 +47,7 @@ function TableTrackExpenses({ style }) {
                             <tr className="h-14">
                                 <th>Status</th>
                                 <th>Name</th>
-                                <th>Amount</th>
+                                <th>Budget</th>
                                 <th>Date</th>
                                 <th></th>
                             </tr>

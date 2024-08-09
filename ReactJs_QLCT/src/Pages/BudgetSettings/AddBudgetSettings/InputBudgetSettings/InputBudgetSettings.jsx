@@ -9,7 +9,7 @@ function InputBudgetSettings({ setJob }) {
       name: "category",
     },
     {
-      label: "Money",
+      label: "Budget",
       type: "number",
       placeholder: "$",
       name: "budget",
