@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { fetchJobs,deleteJobs } from "../../../services/jobs";
+import { getJobs,deleteJobs } from "../../../services/jobs";
 
 function TableBudgetSettings({ styte }) {
     const [jobs, setJobs] = useState([]);
 
     const fetchBudgetSettings = async () => {
         try {
-            const data = await fetchJobs(`http://localhost:5000/budgetSettings`);
+            const data = await getJobs(`http://localhost:5000/budgetSettings`);
             return data;
         } catch (error) {
             console.error('Error fetching budget setting:', error);

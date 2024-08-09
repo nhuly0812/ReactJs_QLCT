@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchJobs } from '../../../services/jobs';
+import { getJobs } from '../../../services/jobs';
 function TableUser() {
     // const dataTableUser = [
     //     { id: 0, name: 'Lynn@fpt.edu.vn', display: 'Present' },
@@ -11,7 +11,7 @@ function TableUser() {
     const  [user,setUser] = useState([]);
     const fetchUser = async ()=>{
         try {
-            const data = await fetchJobs(`http://localhost:5000/user`);
+            const data = await getJobs(`http://localhost:5000/user`);
             return data;
         } catch (error) {
             console.error('Error fetching budget setting:', error);

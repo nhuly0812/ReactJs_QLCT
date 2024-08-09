@@ -23,14 +23,10 @@ function ItemInput({ setUser }) {
       value: "I accept all terms and conditions",
     },
   ];
-  //xử lý các thay đổi trong form
   const handleChange = (e) => {
-    //lấy tên, kiểu, giá trị, trạng thái từ sự kiện thay đổi
     const { name, type, value, checked } = e.target;
-    // Xác định giá trị đầu vào dựa trên kiểu của trường
     const inputValue = type === "checkbox" ? checked : value;
 
-    // Cập nhật state user với giá trị mới
     setUser((prevUser) => ({ ...prevUser, [name]: inputValue }));
   };
 
@@ -43,7 +39,7 @@ function ItemInput({ setUser }) {
               <input
                 type={item.type}
                 name={item.name}
-                checked={item.value ? item.value : false} // Lưu trạng thái checkbox
+                checked={item.value ? item.value : false} 
                 onChange={handleChange}
               />
               {item.value}
