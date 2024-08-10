@@ -6,22 +6,18 @@ function TableBudgetSettings({ styte }) {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-        const getBudgetSettings = async () => {
+        const fetchBudgetSettings = async () => {
             try {
-                const response = await fetch('http://localhost:5000/budgetSettings');
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
+                const data = await getJobs('http://localhost:5000/budgetSettings');
                 setJobs(data);
             } catch (error) {
                 console.error('Error fetching budget settings:', error);
             }
         };
 
-        getBudgetSettings(); 
+        fetchBudgetSettings();
     }, []);
-
+    
 // Xóa ngân sách
 const handleDelete = async (id) => {
         try { 

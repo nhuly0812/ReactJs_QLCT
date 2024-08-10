@@ -6,22 +6,20 @@ function TableTrackExpenses({ style }) {
     const [jobs, setJobs] = useState([]);
 
    
-    useEffect(() => {
-        const getTrackExpenses = async () => {
-            try {
-                const response = await fetch('http://localhost:5000/TrackExpenses');
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
-                setJobs(data);
-            } catch (error) {
-                console.error('Error fetching track expenses:', error);
-            }
-        };
-
-        getTrackExpenses();
-    }, []);
+   // Sử dụng useEffect để gọi hàm getJobs
+useEffect(() => {
+    const getTrackExpenses = async () => {
+      try {
+        // Gọi hàm getJobs với URL tương ứng
+        const tableServer = await getJobs('http://localhost:5000/TrackExpenses');
+        setJobs(tableServer);
+      } catch (error) {
+        console.error('Error fetching track expenses:', error);
+      }
+    };
+  
+    getTrackExpenses();
+  }, []);
 
     const handleDelete = async (id) => {
         try {
