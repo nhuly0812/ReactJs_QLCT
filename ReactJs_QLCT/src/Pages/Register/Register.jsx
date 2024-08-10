@@ -10,6 +10,7 @@ function Register() {
     const addUser = async () => {
         try {
             console.log('Đang cố gắng tạo người dùng:', user);
+            
             const data = await createUser(user, 'http://localhost:5000/user');
     
             if (data) { 

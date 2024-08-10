@@ -17,6 +17,11 @@ import AdminUser from '../Pages/AdminUser/AdminUser';
 import AdminExpense from '../Pages/AdminExpense/AdminExpense';
 
 const publicRouter = [
+    { path: '/login', component: Login, layout: LoginLayout },
+    { path: '/register', component: Register, layout: LoginLayout },
+];
+
+const privateRouter = [
     { path: '/', component: Home },
     { path: '/trackExpenses', component: TrackExpenses },
     { path: '/budgetSettings', component: BudgetSettings },
@@ -24,21 +29,13 @@ const publicRouter = [
     { path: '/dailyCost', component: DailyCost },
     { path: '/setting', component: Setting },
     { path: '/account', component: Account },
-    
-
-    { path: '/admin', title: 'Home ', component: AdminPage, layout: AdminLayout },
+    { path: '/admin', title: 'Home', component: AdminPage, layout: AdminLayout },
     { path: '/adminUser', title: 'User Management', component: AdminUser, layout: AdminLayout },
     { path: '/adminExpense', title: 'Expense Management', component: AdminExpense, layout: AdminLayout },
-
     { path: '/tableBudgetSettings', component: TableBudgetSettings },
     { path: '/editBudgetSettings/:id', component: EditBudgetSettings },
-
     { path: '/tableTrackExpenses', component: TableTrackExpenses },
     { path: '/editTrackExpenses/:id', component: EditTrackExpenses },
-
-    { path: '/login', component: Login, layout: LoginLayout },
-    { path: '/register', component: Register, layout: LoginLayout },
 ];
-const privateRouter = [{}];
 
 export { publicRouter, privateRouter };

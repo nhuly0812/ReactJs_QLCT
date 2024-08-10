@@ -5,22 +5,18 @@ function TableTrackExpenses({ style }) {
 
     const [jobs, setJobs] = useState([]);
 
-    const fetchTrackExpenses = async () => {
-        try {
-            const data = await getJobs(`http://localhost:5000/TrackExpenses`);
-            return data;
-        } catch (error) {
-            console.error('Error fetching budget setting:', error);
-        }
-    };
-  
+   
     useEffect(() => {
         const getTrackExpenses = async () => {
             try {
-                const tableServer = await fetchTrackExpenses();
-                setJobs(tableServer);
+                const response = await fetch('http://localhost:5000/TrackExpenses');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                setJobs(data);
             } catch (error) {
-                console.error('Error fetching budget settings:', error);
+                console.error('Error fetching track expenses:', error);
             }
         };
 

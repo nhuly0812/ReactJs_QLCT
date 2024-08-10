@@ -5,19 +5,15 @@ import { getJobs,deleteJobs } from "../../../services/jobs";
 function TableBudgetSettings({ styte }) {
     const [jobs, setJobs] = useState([]);
 
-    const fetchBudgetSettings = async () => {
-        try {
-            const data = await getJobs(`http://localhost:5000/budgetSettings`);
-            return data;
-        } catch (error) {
-            console.error('Error fetching budget setting:', error);
-        }
-    };
     useEffect(() => {
         const getBudgetSettings = async () => {
             try {
-                const tableServer = await fetchBudgetSettings();
-                setJobs(tableServer);
+                const response = await fetch('http://localhost:5000/budgetSettings');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                setJobs(data);
             } catch (error) {
                 console.error('Error fetching budget settings:', error);
             }
