@@ -5,12 +5,9 @@ function TableTrackExpenses({ style }) {
 
     const [jobs, setJobs] = useState([]);
 
-   
-   // Sử dụng useEffect để gọi hàm getJobs
-useEffect(() => {
+   useEffect(() => {
     const getTrackExpenses = async () => {
       try {
-        // Gọi hàm getJobs với URL tương ứng
         const tableServer = await getJobs('http://localhost:5000/TrackExpenses');
         setJobs(tableServer);
       } catch (error) {
