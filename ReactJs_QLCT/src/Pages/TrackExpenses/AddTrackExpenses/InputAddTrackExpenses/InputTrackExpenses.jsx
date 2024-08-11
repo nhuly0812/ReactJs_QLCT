@@ -13,7 +13,7 @@ function InputTrackExpenses({ setJob }) {
       options: ["Food", "Transportation", "Shopping", "Entertainment"],
       type: 'select',
       placeholder: '',
-      name: 'name'
+      name: 'category'
     },
     {
       label: 'Budget',

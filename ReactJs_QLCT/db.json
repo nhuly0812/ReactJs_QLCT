@@ -3,51 +3,58 @@
     {
       "id": "2",
       "status": "Pending",
-      "name": "Rent",
+      "category": "Transportation",
       "amount": 500,
       "date": "2024-07-03"
     },
     {
       "id": "3",
       "status": "Completed",
-      "name": "Utilities",
+      "category": "Food",
       "amount": 150,
       "date": "2024-07-05"
     },
     {
       "id": "e4a7",
       "status": "Pending",
-      "name": "nnl0812",
-      "amount": "8765",
+      "category": "Shopping",
+      "amount": "150",
       "date": "2024-07-18"
     },
     {
       "id": "710b",
       "status": "Completed",
-      "name": "Sashimi cá tra",
-      "amount": "50000",
+      "category": "Shopping",
+      "amount": "500",
       "date": "2024-08-08"
     },
     {
       "id": "2e15",
       "status": "Completed",
-      "name": "hhh",
-      "amount": "123333",
+      "category": "Shopping",
+      "amount": "400",
       "date": "2024-08-09"
     },
     {
       "id": "fc38",
       "status": "Pending",
-      "name": "face",
-      "amount": "500",
+      "category": "Entertainment",
+      "amount": 500,
       "date": "2024-08-15"
     },
     {
       "id": "ecf0",
       "status": "Completed",
-      "name": "Shopping",
-      "amount": "123333",
+      "category": "Shopping",
+      "amount": "350",
       "date": "2024-08-21"
+    },
+    {
+      "id": "c64a",
+      "status": "Completed",
+      "category": "Transportation",
+      "amount": "720",
+      "date": "2024-08-15"
     }
   ],
   "budgetSettings": [
@@ -60,26 +67,26 @@
     {
       "id": "44bc",
       "category": "Transportation",
-      "budget": "250",
-      "note": "wwwwww"
+      "budget": 250,
+      "note": "Fuel and transport"
     },
     {
       "id": "b412",
-      "budget": "1000",
-      "note": "2222",
-      "category": "Entertainment"
+      "category": "Entertainment",
+      "budget": "550",
+      "note": "Leisure activities"
     },
     {
       "id": "0e75",
-      "budget": "1000",
-      "note": "wwwwww",
-      "category": "Transportation"
+      "category": "Transportation",
+      "budget": "300",
+      "note": "Travel expenses"
     },
     {
       "id": "51b5",
       "category": "Shopping",
-      "budget": "1000",
-      "note": "Eat"
+      "budget": "450",
+      "note": "Clothing and accessories"
     }
   ],
   "user": [
@@ -106,38 +113,13 @@
       "password": "hhhhhh"
     },
     {
-      "id": "d31d",
-      "email": "d@gmail.com",
-      "password": "hhhhhh"
-    },
-    {
       "id": "dd00",
       "email": "ly@gmail.com",
       "password": "123123"
     },
     {
-      "id": "7fb4",
-      "email": "admin@gmai.com",
-      "password": "123123"
-    },
-    {
-      "id": "0188",
-      "email": "admin@gmail.com",
-      "password": "123123"
-    },
-    {
-      "id": "34fc",
-      "email": "a@gmail.com",
-      "password": "123123"
-    },
-    {
-      "id": "9909",
-      "email": "a@gmail.com",
-      "password": "123123"
-    },
-    {
-      "id": "1f7f",
-      "email": "nguyennhuly08122004@gmail.com",
+      "id": "c651",
+      "email": "ly@gmail.com",
       "password": "123123"
     }
   ]

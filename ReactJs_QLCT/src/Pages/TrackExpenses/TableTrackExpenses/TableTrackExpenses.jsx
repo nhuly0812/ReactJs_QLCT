@@ -40,7 +40,7 @@ useEffect(() => {
                         <thead>
                             <tr className="h-14">
                                 <th>Status</th>
-                                <th>Name</th>
+                                <th>Category</th>
                                 <th>Budget</th>
                                 <th>Date</th>
                                 <th></th>
@@ -52,7 +52,7 @@ useEffect(() => {
                                     <td className={item.status === 'Completed' ? 'text-green-500' : 'text-red-500'}>
                                         {item.status}
                                     </td>
-                                    <td>{item.name}</td>
+                                    <td>{item.category}</td>
                                     <td>${item.amount}</td>
                                     <td>{item.date}</td>
                                     <td>

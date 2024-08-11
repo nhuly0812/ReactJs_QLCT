@@ -3,7 +3,6 @@ import BudgetSettings from '../Pages/BudgetSettings/BudgetSettings';
 import EditBudgetSettings from '../Pages/BudgetSettings/EditBudgetSettings/EditBudgetSettings';
 import TableBudgetSettings from '../Pages/BudgetSettings/TableBudgetSettings/TableBudgetSettings';
 import CostOverview from '../Pages/CostOverview/CostOverview';
-import DailyCost from '../Pages/DailyCost/DailyCost';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
@@ -26,7 +25,6 @@ const privateRouter = [
     { path: '/trackExpenses', component: TrackExpenses },
     { path: '/budgetSettings', component: BudgetSettings },
     { path: '/costOverview', component: CostOverview },
-    { path: '/dailyCost', component: DailyCost },
     { path: '/setting', component: Setting },
     { path: '/account', component: Account },
     { path: '/admin', title: 'Home', component: AdminPage, layout: AdminLayout },

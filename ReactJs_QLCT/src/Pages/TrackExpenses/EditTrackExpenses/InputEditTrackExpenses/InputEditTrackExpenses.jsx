@@ -6,15 +6,13 @@ function InputTrackExpenses({ job, setJob }) {
             label: 'Status',
             type: 'select',
             options: ['Pending', 'Completed', 'Canceled'],
-            placeholder: 'Status',
             name: 'status'
           },
         {
-            label: 'Name',
+            label: 'Category',
             type: 'select',
             options: ['Food', 'Transportation', 'Shopping', 'Entertainment'],
-            placeholder: '',
-            name: 'name',
+            name: 'category',
         },
         {
             label: 'Amount',

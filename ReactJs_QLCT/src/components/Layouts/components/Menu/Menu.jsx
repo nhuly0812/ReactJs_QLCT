@@ -8,8 +8,7 @@ const listItem = [
   { id: 2, name: 'Track Expenses', path: '/trackExpenses', icon: 'fa-solid fa-coins' },
   { id: 3, name: 'Budget Settings', path: '/budgetSettings', icon: 'fa-solid fa-sack-dollar' },
   { id: 4, name: 'Cost Overview', path: '/costOverview', icon: 'fa-solid fa-chart-simple' },
-  { id: 5, name: 'Daily Cost', path: '/dailyCost', icon: 'fa-solid fa-repeat' },
-  { id: 6, name: 'Setting', path: '/setting', icon: 'fa-solid fa-gear' },
+  { id: 5, name: 'Setting', path: '/setting', icon: 'fa-solid fa-gear' },
 
 ];
 

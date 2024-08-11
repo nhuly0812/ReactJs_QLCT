@@ -42,18 +42,18 @@ function TableExpense() {
 
                     <tr className="h-14 border-b-2 text-[#308BEB]">
                         <th>ID</th>
-                        <th>status</th>
-                        <th>name</th>
-                        <th>amount</th>
-                        <th>date</th>
+                        <th>Status</th>
+                        <th>Category</th>
+                        <th>Budget</th>
+                        <th>Date</th>
                     </tr>
                     {jobs.map((item) => (
                         <tr key={item.id} className="h-16">
                             <td>{item.id}</td>
 
                             <td>{item.status}</td>
-                            <td>{item.name}</td>
-                            <td>{item.amount}</td>
+                            <td>{item.category}</td>
+                            <td>${item.amount}</td>
                             <td>{item.date}</td>
                             <td>
                                 <Link to="#">

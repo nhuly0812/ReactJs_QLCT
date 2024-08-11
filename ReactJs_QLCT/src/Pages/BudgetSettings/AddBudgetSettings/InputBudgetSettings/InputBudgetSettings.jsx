@@ -11,13 +11,13 @@ function InputBudgetSettings({ setJob }) {
     {
       label: "Budget",
       type: "number",
-      placeholder: "$",
+      placeholder: "budget",
       name: "budget",
     },
     {
       label: "Note",
       type: "text",
-      placeholder: "......",
+      placeholder: "note",
       name: "note",
     },
   ];

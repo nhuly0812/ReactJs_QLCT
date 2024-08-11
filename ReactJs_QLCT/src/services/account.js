@@ -92,7 +92,7 @@ export const createUser = async (user, url) => {
         }
 
         const data = await res.json();
-        toast.success('Đăng ký thành công');
+        toast.success('Register successful');
         return data;
     } catch (error) {
         console.error('Error creating user:', error);
