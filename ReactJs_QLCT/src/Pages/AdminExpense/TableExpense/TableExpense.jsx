@@ -1,36 +1,27 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getJobs } from '../../../services/jobs';
+import { getJobs,deleteJobs } from '../../../services/jobs';
 function TableExpense() {
     const [jobs, setJobs] = useState([]);
-    const fetchjob = async () => {
-        try {
-            const data = await getJobs(`http://localhost:5000/TrackExpenses`);
-            return data;
-        } catch (error) {
-            console.error('Error fetching budget setting:', error);
-        }
-    };
-
+    
     useEffect(() => {
-        const getjob = async () => {
+        const fetchJobs = async () => {
             try {
-                const tableServer = await fetchjob();
-                setJobs(tableServer);
+                const data = await getJobs('http://localhost:5000/TrackExpenses');
+                setJobs(data);
             } catch (error) {
-                console.error('Error fetching budget settings:', error);
+                console.error('Error fetching jobs:', error);
             }
         };
-
-        getjob();
+    
+        fetchJobs();
     }, []);
 
     const handleDelete = async (id) => {
         try {
-            await fetch(`http://localhost:5000/TrackExpenses/${id}`, { method: 'DELETE' });
-            setJobs(jobs.filter((item) => item.id !== id));
+            await deleteJobs(jobs, setJobs, id, `http://localhost:5000/TrackExpenses/${id}`);
         } catch (error) {
-            console.error('Error deleting budget setting:', error);
+            console.error('Error deleting track expense:', error);
         }
     };
 

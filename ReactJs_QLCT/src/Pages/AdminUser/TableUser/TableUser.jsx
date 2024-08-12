@@ -1,45 +1,31 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getJobs } from '../../../services/jobs';
+import { getJobs,deleteJobs} from '../../../services/jobs';
 function TableUser() {
-    // const dataTableUser = [
-    //     { id: 0, name: 'Lynn@fpt.edu.vn', display: 'Present' },
-    //     { id: 1, name: 'Khoinn@fpt.edu.vn', display: 'Present' },
-    //     { id: 2, name: 'Tamnn@fpt.edu.vn', display: 'Present' },
-    //     { id: 3, name: 'Ninnn@fpt.edu.vn', display: 'Present' },
-    // ];
-    const  [user,setUser] = useState([]);
-    const fetchUser = async ()=>{
-        try {
-            const data = await getJobs(`http://localhost:5000/user`);
-            return data;
-        } catch (error) {
-            console.error('Error fetching budget setting:', error);
-        }
-    }
+    const [user, setUser] = useState([]);
 
     useEffect(() => {
-        const getUser = async () => {
+        const fetchUser = async () => {
             try {
-                const tableServer = await fetchUser();
-                setUser(tableServer);
+                const data = await getJobs(`http://localhost:5000/user`);
+                setUser(data);
             } catch (error) {
-                console.error('Error fetching budget settings:', error);
+                console.error('Error fetching budget setting:', error);
             }
         };
-
-        getUser();
+    
+        fetchUser();
     }, []);
+    
 
     const handleDelete = async (id) => {
-        try{
-        await fetch(`http://localhost:5000/user/${id}`,
-             { method: 'DELETE' });
-        setUser(user.filter((item) => item.id !== id));
-        }catch (error) {
-            console.error('Error deleting budget setting:', error);
+        try {
+            await deleteJobs(user, setUser, id, `http://localhost:5000/user/${id}`);
+        } catch (error) {
+            console.error('Error deleting user:', error);
         }
     };
+    
 
     return (
         <div className={` mt-5`}>

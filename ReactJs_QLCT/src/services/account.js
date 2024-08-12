@@ -26,7 +26,6 @@ export const login = async (email, password, navigate) => {
 
         const users = await res.json();
 
-        // Tìm người dùng với email khớp
         const user = users.find(user => user.email === email);
 
         if (!user) {
@@ -34,7 +33,6 @@ export const login = async (email, password, navigate) => {
             return;
         }
 
-        // Kiểm tra mật khẩu
         if (user.password !== password) {
             toast.error('Incorrect password');
             return;

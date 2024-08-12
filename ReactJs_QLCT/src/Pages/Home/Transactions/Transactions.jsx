@@ -6,7 +6,8 @@ import { getJobs } from '../../../services/jobs.js';
 
 function Transactions() {
   const [budgetSettings, setBudgetSettings] = useState([]);
-
+  
+  useEffect(() => {
   const fetchBudgetSettings = async () => {
     try {
       const data = await getJobs('http://localhost:5000/budgetSettings');
@@ -15,8 +16,6 @@ function Transactions() {
       console.error('Error fetching budget settings:', error);
     }
   };
-
-  useEffect(() => {
     fetchBudgetSettings();
   }, []);
 

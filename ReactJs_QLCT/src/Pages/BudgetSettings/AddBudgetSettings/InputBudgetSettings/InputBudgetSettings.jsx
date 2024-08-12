@@ -1,5 +1,5 @@
 function InputBudgetSettings({ setJob }) {
-  //mảng chứa cấu hình cho các trường dữ liệu trên form
+
   const dataBudgetSettings = [
     {
       label: "Category",
@@ -21,11 +21,10 @@ function InputBudgetSettings({ setJob }) {
       name: "note",
     },
   ];
+
   const handleChange = (e) => {
-
     const { name, value } = e.target;
-
-    setJob((prevJob) => ({ ...prevJob, [name]: value }));
+    setJob((prevJob) => ({...prevJob, [name]: value }));
   };
 
   return (
